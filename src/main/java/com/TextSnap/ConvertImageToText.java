@@ -27,6 +27,8 @@ public class ConvertImageToText {
         Tesseract tesseract = new Tesseract();
         tesseract.setDatapath("tessdata");
         tesseract.setLanguage("eng");
+        tesseract.setVariable("user_defined_dpi", "300");
+
         String extractTexted=tesseract.doOCR(tempFile);
         tempFile.delete();
         
